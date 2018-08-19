@@ -1,0 +1,87 @@
+<form [formGroup]="myformGroup">
+  <div class="row">
+    <div class="col">
+      <div class="page-header">Fill the below details</div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-control-label">User Name</label>
+          <input type="text"  formControlName="userName" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-control-label">First Name</label>
+          <input type="text" formControlName="firstName" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="lastname" class="form-control-label">Last Name</label>
+            <input type="text" formControlName="lastName" class="form-control">  
+        </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="lastname" class="form-control-label">Email Address</label>
+            <input type="text" formControlName="email" class="form-control">  
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="lastname" class="form-control-label">Password</label>
+            <input type="password" formControlName="password" class="form-control">  
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="lastname" class="form-control-label">Confirm Password</label>
+            <input type="password" formControlName="confirmPassword" class="form-control">  
+        </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="lastname" class="form-control-label">Gender</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="gender"  value="M">
+                <label class="form-check-label" for="exampleRadios1">
+                  Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="gender"  value="F">
+                <label class="form-check-label" for="exampleRadios1">
+                  Female
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="gender"   value="T">
+                <label class="form-check-label" for="exampleRadios1">
+                  Transgender
+                </label>
+            </div>
+            
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="mobileNo" class="form-control-label">Mobile</label>
+            <input type="text" formControlName="mobileNo" class="form-control">
+        </div>       
+      </div>
+    </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <button class="btn btn-success" (click)="register()">Register</button>
+        <button class="btn btn-link" [routerLink]="['/login']">Back to Login</button>
+      </div>
+    </div>
+  </div>         
+</form>

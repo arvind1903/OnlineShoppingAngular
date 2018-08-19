@@ -1,0 +1,49 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule, Router, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './Component/login/login.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Http, HttpModule } from '@angular/http';
+import { SignUpComponent } from './Component/sign-up/sign-up.component';
+import { PagenotfoundComponent } from './Component/pagenotfound/pagenotfound.component';
+import { HomeComponent } from './Component/home/home.component';
+import { ToastrModule } from 'ngx-toastr';
+import { SidebarComponent } from './Component/sidebar/sidebar.component';
+
+const angRoutes : Routes = [ 
+  { path : "" , redirectTo : 'home', pathMatch : "full"},
+  { path : "login" , component : LoginComponent},
+  { path : "signUpCom" , component : SignUpComponent},
+  { path : "home" , component : HomeComponent},
+  { path : "**" , component : PagenotfoundComponent}
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HeaderComponent,
+    FooterComponent,
+    SignUpComponent,
+    PagenotfoundComponent,
+    HomeComponent,
+    SidebarComponent
+    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule,
+    RouterModule.forRoot(angRoutes,{useHash: true}),
+    ToastrModule.forRoot()
+  ],
+  providers: [LoginService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
