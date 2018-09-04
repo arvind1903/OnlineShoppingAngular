@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <div class="row ">
+    <div class="page-header mb-4">
+      <b>Add To Cart</b>
+    </div>
+  </div>
+  <div class="row">
+
+    <table datatable class="row-border hover" style="width: 100%;" border="1%" >
+      <thead>
+        <tr>
+          <td><b>Product Detail</b></td>
+          <td><b>Quantity</b></td>
+          <td><b>Price</b></td>
+        </tr>        
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="card-group">
+              <div class="card-text">
+                  <img  src="assets/iphone.png" style="width:200px;height:150px;" alt="Card image cap">
+              </div>
+              <div class="card-text ml-2">
+                <table>
+                  <tr>
+                    <td>Product Name: </td>
+                    <td>iPhone 6</td>
+                  </tr>
+                  <tr>
+                      <td>Product Description: </td>
+                      <td>iPhone 6 Description</td>
+                  </tr>
+                  <tr>
+                      <td>Product Name: </td>
+                      <td>iPhone 6</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+           </td>
+          <td>
+              <div class="btn-group dropright">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Quantity
+                  </button>
+                  <select class="dropdown-menu">
+                      <option *ngFor="let item of quantityList">{{item}}</option>
+                    </select>
+                
+                </div>
+            
+          </td>
+          <td>100</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Total Price</td>
+            <td>100</td>
+          </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="row mt-4">
+    
+    <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title">Estimated Delivery</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-4">
+    <div class="card">
+      <div class="card-header">
+       <i></i> <b>Shipping Address</b>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Name of Person</h5>
+        <p class="card-text">Address Details</p>
+        <a href="#" class="btn btn-success">Edit Address</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row text-center mt-4">
+    <div class="col-12">
+        <button type="submit" [routerLink]="['/payment']"  class="btn btn-success">Proceed to Payment</button>
+    </div>
+ </div>
+</div>

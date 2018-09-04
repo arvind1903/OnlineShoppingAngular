@@ -14,13 +14,18 @@ import { PagenotfoundComponent } from './Component/pagenotfound/pagenotfound.com
 import { HomeComponent } from './Component/home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SidebarComponent } from './Component/sidebar/sidebar.component';
-
+import { AddtocartComponent } from './Component/addtocart/addtocart.component';
+import { DataTableModule } from 'angular-datatables';
+import { PaymentComponent } from './Component/payment/payment.component';
 const angRoutes : Routes = [ 
   { path : "" , redirectTo : 'home', pathMatch : "full"},
   { path : "login" , component : LoginComponent},
   { path : "signUpCom" , component : SignUpComponent},
   { path : "home" , component : HomeComponent},
+  { path : "addToCart" ,component : AddtocartComponent},
+  { path : "payment" , component : PaymentComponent},
   { path : "**" , component : PagenotfoundComponent}
+ 
 ]
 
 @NgModule({
@@ -32,7 +37,9 @@ const angRoutes : Routes = [
     SignUpComponent,
     PagenotfoundComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    AddtocartComponent,
+    PaymentComponent
     ],
   imports: [
     BrowserModule,
@@ -40,7 +47,7 @@ const angRoutes : Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     HttpModule,
-    RouterModule.forRoot(angRoutes,{useHash: true}),
+    RouterModule.forRoot(angRoutes,{useHash:true}),
     ToastrModule.forRoot()
   ],
   providers: [LoginService],
