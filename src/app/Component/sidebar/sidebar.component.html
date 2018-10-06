@@ -1,80 +1,15 @@
-<div id="content" class="wrapper">
+<div id="content" class="wrapper" >
 
 
   <nav class="navbar-expand-lg" id="sidebar">
-    <div class="sidebar-header">
-      <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif">Shopping Mall</h3>
-    </div>    
 
-
-    <ul class="list-unstyled ">
-      <p>Categories</p>
-      <li class="active">
-          <a href="#homeSubmenu" target="_self" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle sidebarClass">Home</a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li>
-                  <a href="#">Home 1</a>
-              </li>
-              <li>
-                  <a href="#">Home 2</a>
-              </li>
-              <li>
-                  <a href="#">Home 3</a>
-              </li>
-          </ul>
-      </li>
+    <ul class="list-unstyled " *ngFor=" let category of categoryList">
+      <!-- <p>Categories</p> -->
       <li>
-          <a href="#" [routerLink]="['mens']">Mens</a>
+        <a >{{category.categoryName}}</a>
       </li>
-      <li>
-          <a href="#">Womens</a>
-      </li>
-      <li>
-          <a href="#">Kids</a>
-      </li>
-      <li>
-          <a href="#page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-          <ul class="collapse list-unstyled" id="page">
-              <li>
-                  <a href="#">Page 1</a>
-              </li>
-              <li>
-                  <a href="#">Page 2</a>
-              </li>
-              <li>
-                  <a href="#">Page 3</a>
-              </li>
-          </ul>
-      </li>
-      <li>
-          <a href="#">Portfolio</a>
-      </li>
-      <li>
-          <a href="#">Contact</a>
-      </li>
+      
   </ul>
   </nav>
-
-  <!-- Page Content -->
- <!--<div id="content">
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-
-         <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-            <span>Toggle Sidebar</span>
-        </button>
-
-        <form class="form-inline">
-          <a class="ml-2">English</a>
-          <a class="ml-2 " [routerLink]="['signUpCom']"><i class="fa fa-user mr-1"></i>Register</a>
-          <a class="ml-2" [routerLink]="['login']">SignIn</a>
-          <a class="ml-2 "  href="#"><i class="fa fa-shopping-cart"></i></a>
-            
-        </form>  
-         </div>
-
-</nav>
-   </div> -->
 
 </div> 

@@ -17,15 +17,22 @@ import { SidebarComponent } from './Component/sidebar/sidebar.component';
 import { AddtocartComponent } from './Component/addtocart/addtocart.component';
 import { DataTableModule } from 'angular-datatables';
 import { PaymentComponent } from './Component/payment/payment.component';
+import { FirstPageComponent } from './Component/first-page/first-page.component';
+import { ForgotpasswordComponent } from './Component/forgotpassword/forgotpassword.component';
+import { CategoryService } from './services/category.service';
+import { AddProductComponent } from './Component/add-product/add-product.component';
+import { ProductServicesService } from './services/product-services.service';
 const angRoutes : Routes = [ 
-  { path : "" , redirectTo : 'home', pathMatch : "full"},
+  { path : "" , redirectTo : 'login', pathMatch : "full"},
   { path : "login" , component : LoginComponent},
   { path : "signUpCom" , component : SignUpComponent},
   { path : "home" , component : HomeComponent},
   { path : "addToCart" ,component : AddtocartComponent},
   { path : "payment" , component : PaymentComponent},
+  { path : "firstPage" ,component:FirstPageComponent},
+  { path : "forgotPassword" , component : ForgotpasswordComponent},
+  { path : "addProduct" , component : AddProductComponent },
   { path : "**" , component : PagenotfoundComponent}
- 
 ]
 
 @NgModule({
@@ -39,7 +46,10 @@ const angRoutes : Routes = [
     HomeComponent,
     SidebarComponent,
     AddtocartComponent,
-    PaymentComponent
+    PaymentComponent,
+    FirstPageComponent,
+    ForgotpasswordComponent,
+    AddProductComponent
     ],
   imports: [
     BrowserModule,
@@ -50,7 +60,7 @@ const angRoutes : Routes = [
     RouterModule.forRoot(angRoutes,{useHash:true}),
     ToastrModule.forRoot()
   ],
-  providers: [LoginService],
+  providers: [LoginService,CategoryService,ProductServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

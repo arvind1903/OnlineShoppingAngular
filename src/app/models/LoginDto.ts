@@ -6,5 +6,6 @@ export class LoginDto {
     lastName : string;
     mobileNo : string;
     gender : string;
-    email : string
+    email : string 
+    userId : string;
 }

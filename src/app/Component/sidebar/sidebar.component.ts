@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { CategoryService } from '../../services/category.service';
+import { Category } from '../../models/Category';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,7 +9,8 @@ import * as $ from 'jquery';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  categoryList : Array<Category> = [];
+  constructor(private categoryService : CategoryService) { }
 
   ngOnInit() {
 
@@ -23,7 +26,19 @@ export class SidebarComponent implements OnInit {
       });
   
   });
+
+  this.getAllMenus();
   }
 
 
+  getAllMenus(){
+
+    this.categoryService.getAllMenus().subscribe(response=>{
+      
+      this.categoryList = response.categoryDtoList;
+    })
+
+  }
+
 }
+

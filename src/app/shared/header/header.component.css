@@ -4,3 +4,10 @@
     min-height: 100vh;
     transition: all 0.3s;
 }
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+

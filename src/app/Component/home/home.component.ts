@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginDto } from '../../models/LoginDto';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  loginDto : LoginDto;
   constructor() { }
 
   ngOnInit() {
+
+    this.loginDto = JSON.parse(localStorage.getItem("loginUser"));
   }
 
+
 }
+

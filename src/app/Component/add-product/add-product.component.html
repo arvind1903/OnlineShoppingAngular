@@ -1,0 +1,104 @@
+<div class="container"> 
+                <app-header></app-header>
+    <form [formGroup]="product" >
+
+        <h1>Add Product</h1>
+<div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                <div class="control-label">
+                        <label for="inputText">Product Name:</label>
+                </div>
+                    
+                        <input type="text" class= "form-control" formControlName="productName" id="productName" placeholder="Enter Product Name">
+                </div>
+    </div>
+    <div class="col-md 4">
+            
+<div class="form-group">
+    <div class="control-label">
+            <label for="inputText">Product Quantity:</label>     
+    </div>
+        
+        <input type="text" class= "form-control" formControlName="productQuantity" id="productQuantity" placeholder="Enter Product Product">
+    </div>
+</div>
+<div class="col-md-4">
+
+        <div class="form-group">
+                <label for="inputText">Product Color:</label>
+                <input type="text" class= "form-control" formControlName="productColor" id="productColor" placeholder="Enter Product Color">
+            </div>
+    
+</div>
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+
+            <div class="form-group">
+                    <label for="inputText">Product Price:</label>
+                    <input type="text" class= "form-control" formControlName="productPrice" id="productPrice" placeholder="Enter Product Price">
+                </div>
+
+    </div>
+    <div class="col-md-4">
+
+            <div class="form-group">
+                    <label for="inputText">Product Description:</label>
+                    <input type="text" class= "form-control" formControlName="productDescription" id="productDescription" placeholder="Enter Product Description">
+                </div>
+
+    </div>
+    <div class="col-md-4">
+
+            <div class="form-group">
+                    <label for="inputText">Product Saller Name:</label>
+                    <input type="text" class= "form-control" formControlName="productSellerName" id="productSallerName:" placeholder="Enter Product Saller Name">
+                </div>
+    
+
+    </div>
+
+
+
+    <div class="col-md-4">
+        
+                    <div class="form-group">
+                            <label for="inputText">Upload Imgae:</label>
+                            Select images: <input  type="file" class= "form-control" id="file" formControlName="imgae" id="image:" placeholder="Select Image" multiple>
+                        </div>
+            
+        
+            </div>
+
+
+
+
+
+</div>
+
+           
+
+<div class="row">
+           
+        <div class="col-md-4">
+                <input type="submit" class= "form-control" (click)="addProduct()" class="btn btn-primary" width="20%">
+                
+            
+            </div>
+
+            <div class="col-md-4">
+
+                    <input type="reset" class= "form-control" class="btn btn-primary" style="width: 100%">
+
+            </div>
+
+
+        </div>
+            </form>
+            
+</div>
+
+
+
